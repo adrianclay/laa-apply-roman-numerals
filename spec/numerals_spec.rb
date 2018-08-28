@@ -45,4 +45,8 @@ describe Numerals do
     expect(Numerals.new.to_numeral(7)).to eq("VII")
   end
 
+  it 'can convert integer 8 to numeral VIII' do
+    expect(Numerals.new.to_numeral(8)).to eq("VIII")
+  end
+
 end
