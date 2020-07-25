@@ -1,15 +1,15 @@
 class Numerals
 
-  def to_numeral(int)
+  def to_numeral(integer)
 
-    if int <=3
-      "I" * int
-    elsif int == 4
+    if integer <=3
+      "I" * integer
+    elsif integer == 4
       "IV"
-    elsif int == 5
+    elsif integer == 5
       "V"
-    elsif int > 5
-      to_numeral(5) + to_numeral(int-5)
+    elsif integer > 5
+      to_numeral(5) + to_numeral(integer-5)
     end
 
   end
@@ -43,6 +43,10 @@ describe Numerals do
 
   it 'can convert integer 7 to numeral VII' do
     expect(Numerals.new.to_numeral(7)).to eq("VII")
+  end
+
+  it 'can convert integer 8 to numeral VIII' do
+    expect(Numerals.new.to_numeral(8)).to eq("VIII")
   end
 
 end
